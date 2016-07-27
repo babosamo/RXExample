@@ -11,9 +11,12 @@ import rx.functions.Action1;
 /**
  * Created by Chatper1 on 2016. 7. 26..
  */
-public class Chatper1 {
+public class Chapter1 {
 
-    public void doRXTest(final String tag, final TextView textView){
+    private final String TAG = Chapter1.class.getSimpleName();
+
+    public void doRXTest(final TextView textView){
+
         Observable<String> simpleObservable = Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {
@@ -25,12 +28,12 @@ public class Chatper1 {
         simpleObservable.subscribe(new Subscriber<String>() {
             @Override
             public void onCompleted() {
-                Log.d(tag, "complete!");
+                Log.d(TAG, "complete!");
             }
 
             @Override
             public void onError(Throwable e) {
-                Log.e(tag, "error: " + e.getMessage());
+                Log.e(TAG, "error: " + e.getMessage());
             }
 
             @Override

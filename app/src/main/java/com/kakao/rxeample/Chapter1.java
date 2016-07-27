@@ -46,6 +46,7 @@ public class Chapter1 {
                 .subscribe(new Action1<String>() {
                     @Override
                     public void call(String text) {
+                        Log.d(TAG, "textView set Text: "  + text);
                         textView.setText(text);
                     }
                 });
@@ -54,6 +55,7 @@ public class Chapter1 {
                 .subscribe(new Action1<String>() {
                     @Override
                     public void call(String text) {
+                        Log.d(TAG, "textView2 set Text: "  + text);
                         textView.setText(text);
                     }
                 }, new Action1<Throwable>() {
@@ -72,6 +74,7 @@ public class Chapter1 {
                 .subscribe(new Action1<String>() {
                     @Override
                     public void call(String text) {
+                        Log.d(TAG, "textView3 set Text: "  + text);
                         textView.setText(text);
                     }
                 }, new Action1<Throwable>() {

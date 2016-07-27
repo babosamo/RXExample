@@ -15,4 +15,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello Android!"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello what!"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello what!"
+        android:layout_below="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        />
 </RelativeLayout>
